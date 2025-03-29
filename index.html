@@ -68,6 +68,15 @@ background-image: url("Can you image india china/Skybackground.gif");
   z-index: -1; /* Places it behind the content */
 }
 
+header {
+            width: 100%;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
 
  ul {
   list-style-type: none;
@@ -128,13 +137,14 @@ white-space: pre
 </head>
 <body>
 <center>
- 
+ <header>
 <ul>
   <li><a class="active" href="#home">Home</a></li>
   <li><a href="#news">News</a></li>
   <li><a href="#contact">Contact</a></li>
   <li><a href="#about">About</a></li>
 </ul>
+  </header>
  
 <h1> Bonjour, voici mon portfolio </h1>
 <marquee behavior="scroll" direction="left" scrollamount="10">
