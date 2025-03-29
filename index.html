@@ -17,11 +17,22 @@ body {
 }
 
 #section1 { 
- background-image: url("Can you image india china/blueball.gif");
- background-color: #cccccc;
+ position: relative; /* Needed for positioning */
+  z-index: 1; /* Ensures content stays on top */
  font-size: 25px;
- width: 100%;
 }
+#section1::before { 
+ content: "";
+  position: absolute;
+  top: 0;
+  left: -100px; /* Moves background 100px to the left */
+  width: calc(100% + 200px); /* Extends background beyond the container */
+  height: 100%;
+background-image: url("Can you image india china/White_Sparkle.gif");
+  background-repeat: repeat;
+  z-index: -1; /* Places it behind the content */
+}
+ 
 #section2 { 
  position: relative; /* Needed for positioning */
   z-index: 1; /* Ensures content stays on top */
@@ -41,7 +52,20 @@ background-image: url("Can you image india china/sparklebackground.gif");
 }
  
 #section3 { 
-    background-image: url('images/section3.png');
+ position: relative; /* Needed for positioning */
+  z-index: 1; /* Ensures content stays on top */
+ font-size: 25px;
+}
+#section3::before { 
+ content: "";
+  position: absolute;
+  top: 0;
+  left: -100px; /* Moves background 100px to the left */
+  width: calc(100% + 200px); /* Extends background beyond the container */
+  height: 100%;
+background-image: url("Can you image india china/Skybackground.gif");
+  background-repeat: repeat;
+  z-index: -1; /* Places it behind the content */
 }
 
 
@@ -98,17 +122,17 @@ white-space: pre
  <br><br><br>
 
 <div id="section2"> <!-- Rubriques Ici! --->
-<br><br>
+<br><br><br><br>
 <br><br><br><br><br>
-<h2>Rubriques</h2>
+<h2>Accueil</h2>
 <a>Mon Profil/A propos de moi</a><br><br>
 <a>Compétences et outils</a><br><br>
 <a>Parcours</a><br><br>
 <a>Projets</a><br><br>
 <a>Veille technologique</a><br><br>
-<a>Contact</a><br>
+<a>Contact</a><br><br>
 <br><br><br><br><br>
-<br><br>
+<br><br><br><br>
 </div>
 
 <h2>Mon Profil</h2>
