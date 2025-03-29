@@ -23,15 +23,29 @@ body {
  width: 100%;
 }
 #section2 { 
- background-image: url("Can you image india china/sparklebackground.gif");
- background-color: #cccccc;
+ position: relative; /* Needed for positioning */
+  z-index: 1; /* Ensures content stays on top */
  font-size: 25px;
  color: white;
- width: 100%;
 }
+#section2::before { 
+ content: "";
+  position: absolute;
+  top: 0;
+  left: -100px; /* Moves background 100px to the left */
+  width: calc(100% + 200px); /* Extends background beyond the container */
+  height: 100vw;
+background-image: url("Can you image india china/sparklebackground.gif");
+  background-repeat: repeat;
+  z-index: -1; /* Places it behind the content */
+}
+ 
 #section3 { 
     background-image: url('images/section3.png');
 }
+
+
+
  
 div {
  font-family: futurabold;
